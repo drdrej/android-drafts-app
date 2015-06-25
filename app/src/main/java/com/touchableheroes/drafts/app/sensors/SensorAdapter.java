@@ -7,7 +7,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.touchableheroes.drafts.behaviours.IActivityBehaviour;
+import com.touchableheroes.drafts.behaviours.lifecycle.IActivityLifecycle;
 import com.touchableheroes.drafts.app.sensors.ListenerManager;
 import com.touchableheroes.drafts.app.sensors.Sensors;
 import com.touchableheroes.drafts.ui2.UI;
@@ -17,7 +17,7 @@ import com.touchableheroes.drafts.ui2.UI;
 /**
  * Created by asiebert on 29.11.14.
  */
-public class SensorAdapter implements IActivityBehaviour, SensorEventListener {
+public class SensorAdapter implements IActivityLifecycle, SensorEventListener {
 
     private static final String TAG = "sensor";
 
@@ -87,5 +87,10 @@ public class SensorAdapter implements IActivityBehaviour, SensorEventListener {
     @Override
     public void onAccuracyChanged(final Sensor sensor, final int accuracy) {
         // TODO: another list of listeners
+    }
+
+    @Override
+    public void onStop() {
+        // TODO: impl
     }
 }

@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 import com.touchableheroes.drafts.app.R;
-import com.touchableheroes.drafts.behaviours.AbstractActivityBehaviour;
+import com.touchableheroes.drafts.behaviours.AbstractActivityLifecycle;
 import com.touchableheroes.drafts.navidrawer.AppNavigationDrawerListAdapter;
 import com.touchableheroes.drafts.ui.config.Declaration;
 import com.touchableheroes.drafts.ui.fragments.NavigationDrawerFrgmt;
@@ -13,7 +13,7 @@ import com.touchableheroes.drafts.ui.fragments.NavigationDrawerFrgmt;
 /**
  * Created by asiebert on 20.12.14.
  */
-public class NavigationDrawerBehaviour extends AbstractActivityBehaviour {
+public class NavigationDrawerBehaviour extends AbstractActivityLifecycle {
 
     private final FragmentManager frgmtMgr;
 
@@ -75,7 +75,7 @@ public class NavigationDrawerBehaviour extends AbstractActivityBehaviour {
         final NavigationDrawerFrgmt navi
                 = (NavigationDrawerFrgmt) frgmtMgr.findFragmentById(anchorId);
 
-        final AppNavigationDrawerListAdapter adapter = new AppNavigationDrawerListAdapter(getActivity(), decl.getType());
+        final AppNavigationDrawerListAdapter adapter = new AppNavigationDrawerListAdapter(owner(), decl.getType());
 
         navi.setNaviListAdapter(adapter);
         navi.setup( drawerLayoutId );

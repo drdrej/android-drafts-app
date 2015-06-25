@@ -1,15 +1,20 @@
 package com.touchableheroes.drafts.app.behaviours;
 
+import android.app.Application;
 import android.content.res.Configuration;
 
 import com.j256.ormlite.android.apptools.OpenHelperManager;
-import com.touchableheroes.drafts.behaviours.AbstractAppBehaviour;
+import com.touchableheroes.drafts.behaviours.AbstractApplicationLifecycle;
 // import com.touchableheroes.drafts.db.DBConfig;
 
 /**
  * Created by asiebert on 30.12.14.
  */
-public class OrmLiteDBBeaviour extends AbstractAppBehaviour {
+public class OrmLiteDBBeaviour extends AbstractApplicationLifecycle {
+
+    public OrmLiteDBBeaviour(final Application owner) {
+        super(owner);
+    }
 
     @Override
     public void onLowMemory() {

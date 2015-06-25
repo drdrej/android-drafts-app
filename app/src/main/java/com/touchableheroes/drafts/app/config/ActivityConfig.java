@@ -3,7 +3,7 @@ package com.touchableheroes.drafts.app.config;
 import android.app.Activity;
 
 import com.touchableheroes.drafts.app.lang.LayoutId;
-import com.touchableheroes.drafts.behaviours.lifecycle.IActivityConfig;
+import com.touchableheroes.drafts.behaviours.config.IActivityConfig;
 
 /**
  * Created by asiebert on 16.06.15.
