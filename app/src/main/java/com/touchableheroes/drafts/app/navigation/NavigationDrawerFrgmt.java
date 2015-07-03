@@ -33,6 +33,12 @@ public abstract class NavigationDrawerFrgmt<N extends Enum>
 
     public ListView listView;
 
+/*
+    public NavigationDrawerFrgmt(final Class<N> states) {
+        this.currentState = states.;
+    }
+  */
+
     public NavigationDrawerFrgmt(final N startState) {
         this.currentState = startState;
     }
@@ -71,6 +77,9 @@ public abstract class NavigationDrawerFrgmt<N extends Enum>
         return root;
     }
 
+    public static <Navi extends Enum> NavigationDrawerFrgmt<Navi> create(final Navi state) {
+        return new NavigationDrawerFrgmt<Navi>(state) {;};
+    }
 
              /*
     private ListView listView;
