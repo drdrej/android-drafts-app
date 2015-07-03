@@ -1,5 +1,6 @@
 package com.touchableheroes.drafts.app.sensors;
 
+import android.content.res.Configuration;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -92,5 +93,20 @@ public class SensorAdapter implements IActivityLifecycle, SensorEventListener {
     @Override
     public void onStop() {
         // TODO: impl
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration configuration) {
+
+    }
+
+    @Override
+    public void onLowMemory() {
+
+    }
+
+    @Override
+    public void onTerminate() {
+
     }
 }

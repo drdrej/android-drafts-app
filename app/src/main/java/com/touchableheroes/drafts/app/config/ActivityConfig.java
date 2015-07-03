@@ -8,21 +8,10 @@ import com.touchableheroes.drafts.behaviours.config.IActivityConfig;
 /**
  * Created by asiebert on 16.06.15.
  */
-public class ActivityConfig implements IActivityConfig {
+public class ActivityConfig<A extends Activity> extends UIConfig<A> implements IActivityConfig {
 
-    private final Class<? extends Activity> activityType;
-
-    public ActivityConfig(final Class<? extends Activity> activityType) {
-        if( activityType == null ) {
-            throw new IllegalArgumentException("PARAM:activityType is NULL");
-        }
-
-        this.activityType = activityType;
+    public ActivityConfig(final Class<A> type) {
+        super(type);
     }
 
-
-    @Override
-    public int initialContentView() {
-        return activityType.getAnnotation(LayoutId.class).value();
-    }
 }

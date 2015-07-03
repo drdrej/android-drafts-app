@@ -1,37 +1,37 @@
-package com.touchableheroes.drafts.app.behaviours;
+package com.touchableheroes.drafts.app.ormlite;
 
 import android.app.Application;
 import android.content.res.Configuration;
 
 import com.j256.ormlite.android.apptools.OpenHelperManager;
-import com.touchableheroes.drafts.behaviours.AbstractApplicationLifecycle;
+// import com.touchableheroes.drafts.behaviours.AbstractApplicationLifecycle;
 // import com.touchableheroes.drafts.db.DBConfig;
 
 /**
  * Created by asiebert on 30.12.14.
  */
-public class OrmLiteDBBeaviour extends AbstractApplicationLifecycle {
+public class OrmLiteDBBeaviour /* extends AbstractApplicationLifecycle */ {
 
     public OrmLiteDBBeaviour(final Application owner) {
-        super(owner);
+        // super(owner);
     }
 
-    @Override
+    // @Override
     public void onLowMemory() {
 
     }
 
-    @Override
+    // @Override
     public void onTerminate() {
 
     }
 
-    @Override
+    // @Override
     public void onConfigurationChanged(Configuration configuration) {
 
     }
 
-    @Override
+    // @Override
     public void onCreate() {
 
     }

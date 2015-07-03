@@ -1,4 +1,4 @@
-package com.touchableheroes.drafts.app.loader;
+package com.touchableheroes.drafts.app.ormlite;
 
 import android.content.Context;
 import android.database.Cursor;
