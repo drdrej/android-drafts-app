@@ -21,7 +21,13 @@ public abstract class UIConfig<T> implements IUIConfig {
 
     @Override
     public int getLayoutId() {
-        return ((LayoutId) get(LayoutId.class)).value();
+        final LayoutId layout = (LayoutId) get(LayoutId.class);
+
+        if( layout == null ) {
+            throw new IllegalStateException("Config missing: @LayoutId in class " + type);
+        }
+
+        return layout.value();
     }
 
     public <A extends Annotation> A get(final Class<A> key) {
