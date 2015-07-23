@@ -72,7 +72,7 @@ public class OrmLiteDBBeaviour /* extends AbstractApplicationLifecycle */ {
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
+    public void onConfigurationChanged(Tag newConfig) {
 
     }
     */

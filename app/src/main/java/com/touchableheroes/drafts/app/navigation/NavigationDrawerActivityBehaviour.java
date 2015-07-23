@@ -38,6 +38,7 @@ public class NavigationDrawerActivityBehaviour<N extends Enum> extends BasicBeha
     protected NavigationContainerFragment fragmentNavigation;
 
     protected Fragment fragmentContent;
+
     private ActionBarDrawerToggle drawerToggle;
 
 
@@ -70,6 +71,20 @@ public class NavigationDrawerActivityBehaviour<N extends Enum> extends BasicBeha
     public void onCreate() {
         owner().setContentView(R.layout.navigation_drawer_app_layout);
 
+        /*
+        <fragment
+        android:id="@+id/frgmt_navigation"
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="start"
+
+        android:name="com.touchableheroes.drafts.app.navigation.NavigationContainerFragment"
+                />
+                */
+
+
         bind();
 
         prepareDrawerLayout();
@@ -77,7 +92,8 @@ public class NavigationDrawerActivityBehaviour<N extends Enum> extends BasicBeha
     }
 
     private void prepareFragmentNavigation() {
-        fragmentNavigation.bind(naviImpl);
+        // frueher war hier *.bind()... Was ist der Sinn der Methode?
+        // fragmentNavigation.config(naviImpl); .... // configuration binden. damit man metadata einfach aufnehmen kann.
     }
 
     private void prepareDrawerLayout() {
