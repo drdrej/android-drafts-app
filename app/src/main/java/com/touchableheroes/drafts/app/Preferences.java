@@ -91,6 +91,15 @@ public class Preferences {
         return read(key.getName());
     }
 
+    public <T> T read(final Class<T> key, final T defaultVal) {
+        try {
+            return read(key.getName());
+        } catch (final IOException e) {
+            e.printStackTrace();
+            return defaultVal;
+        }
+    }
+
     protected String encode(final Serializable object)
             throws IOException {
 
