@@ -1,0 +1,3 @@
+# android-drafts-app
+
+DEPRECATED
